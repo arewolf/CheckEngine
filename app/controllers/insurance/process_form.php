@@ -5,8 +5,8 @@ class Controller extends AjaxController {
 	protected function init() {
 		
 		// Update Customer
-		if ($_POST['user_id']){
-			$insurance = new Insurance($_POST['user_id']);
+		if ($_POST['insurance_id']){
+			$insurance = new Insurance($_POST['insurance_id']);
 			$insurance->update($_POST);
 		//New Customer
 		}else{
@@ -14,7 +14,7 @@ class Controller extends AjaxController {
 		}
 		
 		//Send Message Back via AJAX
-		$this->view['redirect'] = '/insurance/landing';
+		$this->view['redirect'] = '/insurance/log';
 		//$this->view['msg'] = "Your Customer was created";
 
 

@@ -42,7 +42,12 @@ class Filter extends Model {
 		$results = db::execute($sql);
 	}
 
-
+	public function remove($filter_id){
+		$sql = "DELETE 
+				FROM filter
+				WHERE filter_id = {$filter_id}";
+		$remove = db::execute($sql);
+	}
 			
 
 }

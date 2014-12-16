@@ -40,6 +40,13 @@ class Oil extends Model {
 		$results = db::execute($sql);
 	}
 
+	public function remove($oil_id){
+		$sql = "DELETE 
+				FROM oil
+				WHERE oil_id = {$oil_id}";
+		$remove = db::execute($sql);
+	}
+
 
 			
 

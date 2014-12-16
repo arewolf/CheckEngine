@@ -35,8 +35,8 @@ extract($controller->view->vars);
 ?>
 
 <!-- Notice this welcome variable was created above and passed into the view:-->
-<div>
-	<h1>Welcome to CheckEngine </h1>
+<div class="home">
+	<h1 class="top_bar">Welcome to CheckEngine </h1>
 	<form action="/process_login" method="POST">
 		<input type="text" name="username" title="Username">
 		<input type="password" name="password" title="Password">

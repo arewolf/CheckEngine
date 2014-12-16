@@ -4,7 +4,7 @@
 		<a href="/oil/landing"><div class="icon_boxes">
 			<div>
 				<div class="icon_holder">
-					<img class="oil" src="/images/oil1.png">
+					<img class="oil" src="/images/oil10.png">
 				</div>
 			</div>
 			<h2>Oil</h2>
@@ -44,7 +44,7 @@
 			<h2>Cars</h2>
 		</div></a>
 		<div class="credits">
-			<h3>Copywrite &copy 2014 R. Wolf </h3>
+			<h3>Copyright &copy 2014 R. Wolf </h3>
 		</div>
 	</div>
 </footer>

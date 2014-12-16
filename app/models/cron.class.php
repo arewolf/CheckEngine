@@ -1,57 +1,49 @@
 <?php
 
 /**
- * Aside
+ * Cron Class
  */
-class Aside extends Model {
+class Cron extends Model {
 
 
 	/**
 	*get_car_id by current_car
-	*/
+	*/ 
 
-	public static function get_car_id() {
+	public static function get_user_id($car_id) {
 
-		$sql= "SELECT car_id FROM car WHERE name= '{$_SESSION['current_car']}';";
+		$sql= "SELECT user_id FROM car WHERE car_id = $car_id;";
 		$results = db::execute($sql);
 		$row=$results->fetch_assoc();
-		return $car_id=$row['car_id'];
+		return $user_id=$row['user_id'];
 
 	}
 
-	/**
-	*get_max_miles
-	**/
-
-	public static function get_max_miles(){
-		$sql = "SELECT max(car_miles), max(cabin_mileage), max(air_mileage), max(oil_miles), max(purchase_mileage), max(rotation_mileage)
-				FROM car
-				NATURAL JOIN filter
-				NATURAL JOIN oil
-				NATURAL JOIN tire
-				WHERE car_id = '{$_SESSION['car_id']}'";
-
-		$results = db::execute($sql);
-		$row = $results->fetch_assoc();
-		$_SESSION['max_miles']= max($row);
-	}
 
 	/**
 	*Insurance Time Left
 	**/
 
 	public static function insurance_time_left(){
-		$sql = "SELECT insurance_expiration_date FROM insurance WHERE user_id = '{$_SESSION['user_id']}' LIMIT 1";
+		$sql = "SELECT insurance_expiration_date, user_id 
+				FROM insurance";
 		$results = db::execute($sql);
-		$row = $results->fetch_assoc();
-		$db_insurance_date = $row['insurance_expiration_date'];
+		while($row = $results->fetch_assoc()){
+			$db_insurance_date = $row['insurance_expiration_date'];
 
-		$date1 = new DateTime($db_insurance_date);
-		$date2 = new DateTime(date("Y-m-d"));
-		$interval = $date1->diff($date2);
-		$_SESSION['insurance_time_left'] = $interval->days . " days ";
+			$date1 = new DateTime($db_insurance_date);
+			$date2 = new DateTime(date("Y-m-d"));
+			$interval = $date1->diff($date2);
+			return $interval->days;
+		
+
+				
+		}
 	
 	}
+
+
+
 
 	/**
 	*Next Oil Change

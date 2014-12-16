@@ -5,7 +5,7 @@ Class Validator {
 	//customer login validation
 		'first_name' => '/^[A-Za-z]{1,20}$/',
 		'last_name' => '/^[A-Za-z]{1,20}$/',
-		'username' => '/[a-zA-Z][a-zA-Z0-9]{6,20}/',
+		'username' => '/[a-zA-Z0-9]{6,20}/',
 		'password' => '/[a-zA-Z0-9]{6,20}/',
 		'email' => '/\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/i',
 		'user_id' => '/[0-9]{1,2}/',

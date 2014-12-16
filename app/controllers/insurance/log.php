@@ -8,9 +8,10 @@ class Controller extends AppController {
 		$results = db::execute($sql);
 		while($row = $results->fetch_assoc()){
 			$insurance_view_fragment = new InsuranceViewFragment;
-			$insurance_view_fragment->insurer= $row['insurer'];
-			$insurance_view_fragment->policy_number= $row['policy_number'];
+			$insurance_view_fragment->insurer = $row['insurer'];
+			$insurance_view_fragment->policy_number = $row['policy_number'];
 			$insurance_view_fragment->insurance_expiration_date= $row['insurance_expiration_date'];
+			$insurance_view_fragment->insurance_id = $row['insurance_id'];
 			$this->view->output .= $insurance_view_fragment->render();
 
 		}

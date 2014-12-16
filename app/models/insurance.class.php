@@ -45,17 +45,17 @@ class Insurance extends Model {
 			'insurance_expiration_date'=> htmlentities($input['insurance_expiration_date']),
 			'policy_number' => htmlentities($input['policy_number']),
 			'insurer' => htmlentities($input['insurer']),
-			'user_id' => htmlentities($_SESSION['user_id'])
+			'insurance_id' => htmlentities($input['insurance_id'])
 		];
 
 		// Ensure values are encompassed with quote marks
 		$sql_values = db::auto_quote($sql_values);
 
 		// Update
-		db::update('insurance', $sql_values, "WHERE user_id = {$_POST['user_id']}");
+		db::update('insurance', $sql_values, "WHERE insurance_id = {$_POST['insurance_id']}");
 		
 		// Return a new instance of this user as an object
-		return new Insurance($this->user_id);
+		return new Insurance($this->insurance_id);
 
 	}
 
@@ -65,6 +65,12 @@ class Insurance extends Model {
 		$results = db::execute($sql);
 	}
 
+	public function remove($insurance_id){
+		$sql = "DELETE 
+				FROM insurance
+				WHERE insurance_id = {$insurance_id}";
+		$remove = db::execute($sql);
+	}
 
 			
 

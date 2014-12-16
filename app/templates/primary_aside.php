@@ -14,9 +14,7 @@ if(isset($_SESSION['car_id'])){
 	Aside::next_tire_purchase();
 	Aside::next_tire_rotation();
 }
-else{
-	echo "here";
-}
+
 	?>
 
 

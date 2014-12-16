@@ -55,5 +55,10 @@ class Tire extends Model {
 	
 	}
 
-
+	public function remove($tire_id){
+		$sql = "DELETE 
+				FROM tire
+				WHERE tire_id = {$tire_id}";
+		$remove = db::execute($sql);
+	}
 }

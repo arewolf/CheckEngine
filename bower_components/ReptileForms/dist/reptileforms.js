@@ -19,7 +19,7 @@
 				'phone_number': {'rule': /\(\d{3}\)[-]\d{3}[-]\d{4}/, 'msg':'Invalid Number'},
 				'email': {'rule':/[A-Za-z]/,'msg':'Invalid Email.'},
 				'password': {'rule':/^[A-Za-z]{6,}$/,'msg':'Invalid Password, Must be at least 6 characters.'},
-				'name': {'rule': /[A-Za-z0-9]{1,20}$/, 'msg':'Input Invalid: A-Z up to 20 characters.'},
+				'name': {'rule': /([A-Za-z]){1,20}$/, 'msg':'Input Invalid: A-Z up to 20 characters.'},
 				'number': {'rule': /\d{1,}/, 'msg':'Invalid Number'}
 
 			}

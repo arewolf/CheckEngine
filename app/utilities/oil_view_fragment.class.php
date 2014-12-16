@@ -2,7 +2,7 @@
 
 class OilViewFragment extends ViewFragment{
 	//settings
-	private $template="<tr><td>{{change_date}}</td><td>{{oil_miles}}</td></tr>";
+	private $template="<tr><td>{{change_date}}</td><td>{{oil_miles}}</td><td><a href='/oil/remove?oil_id={{oil_id}}' class='remove'>Remove</a></td></tr>";
 	private $values = [];
 
 	//set

@@ -28,6 +28,7 @@ Router::add('/tires/insert', '/app/controllers/tires/insert.php');
 Router::add('/tires/rotate', '/app/controllers/tires/rotate.php');
 Router::add('/tires/log', '/app/controllers/tires/log.php');
 Router::add('/tires/process_form', '/app/controllers/tires/process_form.php');
+Router::add('/tires/remove', '/app/controllers/tires/remove.php');
 
 //Oil
 
@@ -35,6 +36,8 @@ Router::add('/oil/landing', '/app/controllers/oil/landing.php');
 Router::add('/oil/insert', '/app/controllers/oil/insert.php');
 Router::add('/oil/log', '/app/controllers/oil/log.php');
 Router::add('/oil/process_form', '/app/controllers/oil/process_form.php');
+Router::add('/oil/remove', '/app/controllers/oil/remove.php');
+
 
 //Filters
 Router::add('/filters/landing', '/app/controllers/filters/landing.php');
@@ -43,6 +46,7 @@ Router::add('/filters/process_form', '/app/controllers/filters/process_form.php'
 Router::add('/filters/air_process_form', '/app/controllers/filters/air_process_form.php');
 Router::add('/filters/air', '/app/controllers/filters/air.php');
 Router::add('/filters/log', '/app/controllers/filters/log.php');
+Router::add('/filters/remove', '/app/controllers/filters/remove.php');
 
 //Insurance
 
@@ -51,15 +55,16 @@ Router::add('/insurance/insert', '/app/controllers/insurance/insert.php');
 Router::add('/insurance/update', '/app/controllers/insurance/update.php');
 Router::add('/insurance/log', '/app/controllers/insurance/log.php');
 Router::add('/insurance/process_form', '/app/controllers/insurance/process_form.php');
+Router::add('/insurance/remove', '/app/controllers/insurance/remove.php');
 
 //Cars
 Router::add('/cars/landing', '/app/controllers/cars/landing.php');
 Router::add('/cars/new', '/app/controllers/cars/new.php');
-Router::add('/cars/select', '/app/controllers/cars/select.php');
 Router::add('/cars/process_form', '/app/controllers/cars/process_form.php');
 Router::add('/cars/process_select', '/app/controllers/cars/process_select.php');
 
-
+// Cron Scripts
+Router::add('/cron/test', '/app/controllers/cron/test.php');
 
 
 // Issue Route

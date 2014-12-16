@@ -11,7 +11,7 @@ class Controller extends AjaxController {
 			$password = md5($_POST['password']);
 			
 			if($user_id = Access::login($username, $password)){
-				$this->view['redirect']= "/cars/select";
+				$this->view['redirect']= "/cars/landing";
 			}else{
 				echo "error";
 			}
