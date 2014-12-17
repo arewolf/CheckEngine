@@ -4,7 +4,7 @@
  * User
  */
 class Car extends Model {
-
+ 
 	/**
 	 * Insert User
 	 */

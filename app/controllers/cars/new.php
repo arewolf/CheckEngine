@@ -23,4 +23,5 @@ extract($controller->view->vars);
 		<input type="text" name="name" title="Name for Vehicle"required data-exp-name="name">
 		
 		<button>Add Car</button>
+	</form>	
 </div>

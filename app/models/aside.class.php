@@ -6,6 +6,20 @@
 class Aside extends Model {
 
 
+	public static function get_mpw($user){
+
+		$sql_mpw ="SELECT mpw
+				   FROM user 
+				   WHERE user_id = '{$user->user_id}'";
+		$results_mpw = db::execute($sql_mpw);
+		$row_mpw = $results_mpw->fetch_assoc();
+		$mpw = $row_mpw['mpw'];
+		return $mpw;
+	
+
+	}
+
+
 	/**
 	*get_car_id by current_car
 	*/
@@ -145,7 +159,11 @@ class Aside extends Model {
 
 		$results = db::execute($sql);
 		$row = $results->fetch_assoc();
-		$warranty = $row['warranty'];
+		if(isset($row['warranty'])){
+			$warranty = $row['warranty'];
+		}else{
+			$warranty = 10000;
+		}
 		
 		$date1 = new DateTime($row['purchase_date']);
 		$date2 = new DateTime(date("Y-m-d"));

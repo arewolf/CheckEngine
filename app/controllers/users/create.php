@@ -38,7 +38,7 @@ extract($controller->view->vars);
 				<option>Boost Mobile</option>
 			</select>
 			<input value="<?=$user->password ?>" type="password" name="password" title="Password" required data-exp-name="password">
-			<input value="<?=$user->mpw ?>" type="text" name="mpw" title="Average Miles Driven Per Week" required data-exp-name="number">
+			<input value="<?=$user->mpw ?>" type="text" name="mpw" title="Average Miles Driven Per Week" required data-exp-name="mpw">
 			<button>Submit</button>
 		</form>
 	<?php else:  ?>
@@ -57,9 +57,10 @@ extract($controller->view->vars);
 				<option>Virgin Mobile</option>
 				<option>Boost Mobile</option>
 			</select>
-			<input value="<?=$user->mpw ?>" type="text" name="mpw" title="Average Miles Driven Per Week" required data-exp-name="number">
+			<input value="<?=$user->mpw ?>" type="text" name="mpw" title="Average Miles Driven Per Week" required data-exp-name="mpw">
 			<input type ="hidden" value="<?= $user->user_id ?>" name="user_id">
 			<button>Submit</button>
 		</form>
 	<?php endif ?>	
+	
 </div>

@@ -21,12 +21,15 @@
 <body>
 
 	<div class="page">
+
 		<?php echo $primary_header; ?>
 		<?php echo $primary_aside; ?>
 		<?php echo $main_content; ?>
 		<?php echo $primary_footer; ?>
 		
 	</div>
+	<div class='notices'></div>
+
 
 	<!-- Include Common Scripts -->
 	<script src="/bower_components/jquery/dist/jquery.js"></script>

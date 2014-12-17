@@ -16,11 +16,12 @@
 			xhr: true,
 			action: self.el.attr('action') || window.location.pathname,
 			expressions: {
-				'phone_number': {'rule': /\(\d{3}\)[-]\d{3}[-]\d{4}/, 'msg':'Invalid Number'},
+				'phone_number': {'rule': /\(\d{3}\)[-]\d{3}[-]\d{4}/, 'msg':'Phone # Format must be (xxx)-xxx-xxxx.'},
 				'email': {'rule':/[A-Za-z]/,'msg':'Invalid Email.'},
-				'password': {'rule':/^[A-Za-z]{6,}$/,'msg':'Invalid Password, Must be at least 6 characters.'},
-				'name': {'rule': /([A-Za-z]){1,20}$/, 'msg':'Input Invalid: A-Z up to 20 characters.'},
-				'number': {'rule': /\d{1,}/, 'msg':'Invalid Number'}
+				'password': {'rule':/^[A-Za-z0-9]{6,}$/,'msg':'Invalid Password, Must be at least 6 characters.'},
+				'name': {'rule':/[A-Za-z\s\.]+/, 'msg':'Input Invalid: A-Z up to 20 characters.'},
+				'mpw': {'rule': /(^[0-9]*[1-9]+[0-9]*\.[0-9]*$)|(^[0-9]*\.[0-9]*[1-9]+[0-9]*$)|(^[0-9]*[1-9]+[0-9]*$)/, 'msg':'Invalid Number, Don\'t use commas!'},
+				'number': {'rule': /[0-9]/, 'msg':'Must be a Number without commas.'}
 
 			}
 		}, s);

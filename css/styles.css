@@ -75,8 +75,9 @@ header > div{
 
 header span {
 	display:block;
-	padding-left:20px;
-	padding-top:4px;
+	padding-left:16px;
+	padding-bottom:2px;
+	
 	color:black;
 }
 
@@ -130,6 +131,7 @@ footer{
 	width:125px;
 	height:125px;
 	margin:0px auto;
+	margin-top:5px;
 	position:relative;
 }
 
@@ -164,12 +166,14 @@ footer img{
 
 aside {
 	float:left;
-	background: linear-gradient(180deg, rgba(17,17,17,.9) 0, rgba(17,17,17,.7) 50%, rgba(17,17,17,.5) 100%);
+	background: linear-gradient(180deg, rgba(17,17,17,1) 0, rgba(17,17,17,.9) 50%, rgba(17,17,17,.7) 100%);
 	color:white;
-	margin:10px;
-	margin-left:20px;
-	padding:8px;
+	margin:20px;
+	padding:20px;
 	text-align:left;
+	line-height:150%;
+	font-size:13pt;
+
 }
 aside b {
 	opacity:.7;
@@ -203,12 +207,18 @@ td{
 }
 
 .page > div{
-	background-color:rgba(17, 17, 17,.7);
+	background: linear-gradient(180deg, rgba(17,17,17,1) 0, rgba(17,17,17,.7) 50%, rgba(17,17,17,.2) 100%);
 	color:#ddd;
-	margin:10px;
+	margin:20px;
+	margin-left:10px;
 	padding:0 40px;
 	display:inline-block;
 	float:left;
+}
+
+select {
+	width:200px;
+	height:400px;
 }
 
 button{
@@ -280,3 +290,25 @@ a {
 .create > form {
 	padding-bottom:15px;
 }
+
+div.notices {
+	background-color:rgba(17, 17, 17,.7);
+	padding:20px;
+	border: 1px solid black;
+	display:none;
+	position:absolute;
+	right:100px;
+	top:150px;
+	min-height:200px;
+	min-width:500px;
+	color:white;
+
+}
+
+
+div.notices.on {
+	display:block;
+}
+
+/*vehicle select*/
+
